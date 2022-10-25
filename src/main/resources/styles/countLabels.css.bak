@@ -1,0 +1,8 @@
+.label
+{
+	-fx-background-color: #6F8EC7;
+	-fx-background-radius: 5;
+	-fx-font-size: 18;
+	-fx-font-family: "Sans-serif";
+	-fx-text-fill: #ffffff;
+}

@@ -1,0 +1,13 @@
+.label
+{
+	-fx-background-color: #858AD9;
+	-fx-background-radius: 0 5 5 0;
+	-fx-border-radius: 0 5 5 0;
+	-fx-border-color: #6569A6;
+	-fx-border-width: 5;
+	-fx-font-size: 14;
+	-fx-font-family: "Sans-serif";
+	-fx-font-weight: regular;
+	-fx-text-fill: #ffffff;
+}	
+	

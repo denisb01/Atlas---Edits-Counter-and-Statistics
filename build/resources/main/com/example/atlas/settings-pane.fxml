@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right,  #3F2B63 ,  #2a1c42); -fx-background-radius: 0 0 20 0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atlas.SettingsPaneController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #2a1c42;">
+         <children>
+            <Label graphicTextGap="20.0" layoutX="54.0" layoutY="25.0" text="Settings" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/gears.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="100.0" prefHeight="500.0" prefWidth="450.0">
+         <children>
+            <Label layoutX="14.0" layoutY="116.0" text="Set limit:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="limitField" alignment="CENTER" layoutX="97.0" layoutY="117.0" />
+            <Button fx:id="setLimitButton" layoutX="270.0" layoutY="117.0" mnemonicParsing="false" onAction="#changeOrSetLimit" text="Set" />
+            <Label layoutX="132.0" layoutY="11.0" text="Counting Settings" textFill="#bf9ed7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutY="55.0" prefWidth="450.0" />
+            <Label layoutX="14.0" layoutY="66.0" text="Set new limit for today:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutY="170.0" prefWidth="450.0" />
+            <Label layoutX="16.0" layoutY="187.0" text="Set new coefficients:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="240.0" text="Walls:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="wallField" alignment="CENTER" layoutX="110.0" layoutY="240.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setWallButton" layoutX="77.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeOrSetWalls" text="Set" />
+            <Label layoutX="217.0" layoutY="240.0" text="Wall reworks:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="wallReworkField" alignment="CENTER" layoutX="365.0" layoutY="240.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setWallReworkButton" layoutX="315.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeOrSetWallReworks" text="Set" />
+            <Label layoutX="7.0" layoutY="325.0" text="Stagings:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stagingField" alignment="CENTER" layoutX="110.0" layoutY="325.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setStagingButton" layoutX="77.0" layoutY="357.0" mnemonicParsing="false" onAction="#changeOrSetStagings" text="Set" />
+            <Label layoutX="215.0" layoutY="325.0" text="Staging reworks:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stagingReworkField" alignment="CENTER" layoutX="363.0" layoutY="325.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setStagingReworkButton" layoutX="315.0" layoutY="357.0" mnemonicParsing="false" onAction="#changeOrSetStagingReworks" text="Set" />
+            <Label layoutX="6.0" layoutY="408.0" text="Photoshops:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="photoshopField" alignment="CENTER" layoutX="110.0" layoutY="408.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setPhotoshopButton" layoutX="79.0" layoutY="441.0" mnemonicParsing="false" onAction="#changeOrSetPhotoshops" text="Set" />
+            <Label layoutX="217.0" layoutY="408.0" text="Photoshop reworks:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="photoshopReworkField" alignment="CENTER" layoutX="365.0" layoutY="408.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="setPhotoshopReworkButton" layoutX="315.0" layoutY="441.0" mnemonicParsing="false" onAction="#changeOrSetPhotoshopReworks" text="Set" />
+            <Separator layoutX="201.0" layoutY="217.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="450.0" layoutY="100.0" prefHeight="500.0" prefWidth="450.0">
+         <children>
+            <Label layoutX="142.0" layoutY="11.0" text="Profile settings" textFill="#bf9ed7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="108.0" text="Current email address:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="currentEmailField" layoutX="198.0" layoutY="108.0" prefWidth="200.0" />
+            <Label layoutX="14.0" layoutY="335.0" text="New password:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="379.0" text="Confirm password:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="newPasswordField" layoutX="182.0" layoutY="336.0" prefWidth="200.0" />
+            <PasswordField fx:id="confirmPasswordField" layoutX="182.0" layoutY="380.0" prefWidth="200.0" />
+            <Label layoutX="14.0" layoutY="69.0" text="Change your email address:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="250.0" text="Change your password:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="153.0" text="New email address:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newEmailField" layoutX="198.0" layoutY="153.0" prefWidth="200.0" />
+            <Button fx:id="chengeEmailButton" layoutX="142.0" layoutY="198.0" mnemonicParsing="false" onAction="#changeEmailAddress" text="Change Email Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="290.0" text="Current password:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="currentPasswordField" layoutX="182.0" layoutY="291.0" prefWidth="200.0" />
+            <Button fx:id="changePasswordButton" layoutX="148.0" layoutY="429.0" mnemonicParsing="false" onAction="#changePassword" text="Change Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutY="55.0" prefWidth="450.0" />
+            <Separator layoutY="240.0" prefWidth="450.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="450.0" layoutY="100.0" orientation="VERTICAL" prefHeight="500.0" />
+      <Separator layoutY="100.0" prefWidth="900.0" />
+   </children>
+</Pane>

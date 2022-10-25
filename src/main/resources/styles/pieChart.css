@@ -1,0 +1,9 @@
+.chart-title {
+    -fx-text-fill: #ffffff;
+} 
+
+.chart-legend {
+   -fx-background-color: #C9C9DF;
+}
+
+/*.data0.chart-pie { -fx-pie-color:; }*/

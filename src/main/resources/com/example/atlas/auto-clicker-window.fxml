@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atlas.AutoClickerWindowController">
+   <children>
+      <TextField fx:id="hourNumberField" layoutX="69.0" layoutY="55.0" prefHeight="26.0" prefWidth="41.0" />
+      <TextField fx:id="minutesNumberField" layoutX="138.0" layoutY="55.0" prefHeight="26.0" prefWidth="41.0" />
+      <TextField fx:id="secondsNumberField" layoutX="213.0" layoutY="55.0" prefHeight="26.0" prefWidth="41.0" />
+      <TextField fx:id="milisecondsNumberField" layoutX="280.0" layoutY="55.0" prefHeight="26.0" prefWidth="41.0" />
+      <Button fx:id="startButton" layoutX="167.0" layoutY="248.0" mnemonicParsing="false" onAction="#start" text="Start (F6)" />
+      <TextField fx:id="repeatNumberField" layoutX="89.0" layoutY="127.0" prefHeight="17.0" prefWidth="41.0" />
+      <RadioButton fx:id="repeatRadio" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" text="Repeat">
+         <toggleGroup>
+            <ToggleGroup fx:id="Group1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="repeatUntilRadio" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" text="Repeat until stopped" toggleGroup="$Group1" />
+      <Separator layoutX="-1.0" layoutY="104.0" prefWidth="400.0" />
+      <Separator layoutX="-1.0" layoutY="225.0" prefWidth="400.0" />
+      <Separator layoutX="196.0" layoutY="104.0" orientation="VERTICAL" prefHeight="120.0" />
+      <Label layoutX="76.0" layoutY="28.0" text="Hour" />
+      <Label layoutX="137.0" layoutY="28.0" text="Minutes" />
+      <Label layoutX="211.0" layoutY="28.0" text="Seconds" />
+      <Label layoutX="269.0" layoutY="28.0" text="Miliseconds" />
+      <TextField fx:id="yNumberField" layoutX="205.0" layoutY="175.0" prefHeight="26.0" prefWidth="60.0" />
+      <TextField layoutX="205.0" layoutY="130.0" prefHeight="26.0" prefWidth="60.0" fx:id="xNumberField" />
+      <Label layoutX="270.0" layoutY="134.0" text="X" />
+      <Label layoutX="270.0" layoutY="179.0" text="Y" />
+      <Button fx:id="pickLocationButton" layoutX="300.0" layoutY="151.0" mnemonicParsing="false" onAction="#pickLocation" text="Pick Location" />
+      <Label layoutX="145.0" layoutY="131.0" text="times" />
+      <Label layoutX="162.0" layoutY="5.0" style="-fx-background-color: #cccccc;" text="Click Interval" />
+   </children>
+</AnchorPane>

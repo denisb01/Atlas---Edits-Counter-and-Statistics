@@ -1,0 +1,6 @@
+.text-field{
+	-fx-background-color:  #B4BDD4;
+	-fx-prompt-text-fill: #555555;
+	-fx-text-fill: #21304D;;
+	-fx-font-family: "Sans-serif";
+}

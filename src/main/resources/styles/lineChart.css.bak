@@ -1,0 +1,10 @@
+.chart-title{
+	-fx-text-fill: #ffffff;
+}
+.axis {  
+    -fx-tick-label-fill: #ffffff;
+}
+ 
+.axis-label {
+   -fx-text-fill: #462300; 
+}

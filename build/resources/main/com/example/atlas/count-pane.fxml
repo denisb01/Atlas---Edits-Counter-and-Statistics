@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right,  #3F2B63 , #7156DD); -fx-background-radius: 0 0 20 0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atlas.CountPaneController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label graphicTextGap="20.0" layoutX="54.0" layoutY="25.0" text="Count" textFill="#fffdfd">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/calculator.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" graphicTextGap="10.0" layoutX="601.0" layoutY="37.0" text="Date:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="dateLabel" layoutX="682.0" layoutY="37.0" text="//" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutY="100.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0 0 20 0;">
+         <children>
+            <GridPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-radius: 0 0 20 0; -fx-background-color: #C9C9DF; -fx-background-color: linear-gradient(to right,  #3F2B63 , #7156DD);">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="incrementWall" mnemonicParsing="false" onAction="#incrementWallClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Wall (W)" textFill="WHITE" GridPane.columnIndex="1" />
+                  <Button fx:id="incrementWallRework" mnemonicParsing="false" onAction="#incrementWallReworkClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Wall Rework" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="decrementWall" mnemonicParsing="false" onAction="#decrementWallClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" />
+                  <Button fx:id="decrementWallRework" mnemonicParsing="false" onAction="#decrementWallReworkClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="resetWall" mnemonicParsing="false" onAction="#resetWallClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" />
+                  <Button fx:id="resetWallRework" mnemonicParsing="false" onAction="#resetWallReworkClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button fx:id="incrementStaging" mnemonicParsing="false" onAction="#incrementStageClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Stage (S)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="decrementStaging" mnemonicParsing="false" onAction="#decrementStageClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="resetStaging" mnemonicParsing="false" onAction="#resetStageClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Button fx:id="incrementStagingRework" mnemonicParsing="false" onAction="#incrementStageReworkClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Stage Rework" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="decrementStagingRework" mnemonicParsing="false" onAction="#decrementStageReworkClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button fx:id="resetStagingRework" mnemonicParsing="false" onAction="#resetStageReworkClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Button fx:id="incrementPhotshop" mnemonicParsing="false" onAction="#incrementPhotoshopClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Photoshop (A)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button fx:id="incrementPhotoshopRework" mnemonicParsing="false" onAction="#incrementPhotoshopReworkClick" stylesheets="@../../../styles/countButtons.css" text="Photoshop Rework" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button fx:id="decrementPhotoshop" mnemonicParsing="false" onAction="#decrementPhotoshopClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Button fx:id="decrementPhotoshopRework" mnemonicParsing="false" onAction="#decrementPhotoshopReworkClick" stylesheets="@../../../styles/countButtons.css" text="-1" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Button fx:id="resetPhotoshop" mnemonicParsing="false" onAction="#resetPhotoshopClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Button fx:id="resetPhotoshopRework" mnemonicParsing="false" onAction="#resetPhotoshopReworkClick" stylesheets="@../../../styles/countButtons.css" text="Reset" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                  <Button fx:id="resetAll" mnemonicParsing="false" onAction="#resetAllClick" prefWidth="120.0" stylesheets="@../../../styles/countButtons.css" text="Reset All" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Label fx:id="photoshopReworkLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="photoshopLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="stagingReworkLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <effect>
+                        <InnerShadow height="22.28" radius="10.32">
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="wallReworkLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="wallLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="stagingLabel" alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/countLabels.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.3137255012989044" green="0.2823529541492462" blue="0.46666666865348816" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Label>
+                  <Label fx:id="wallTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" />
+                  <Label fx:id="wallReworkTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" GridPane.rowIndex="1" />
+                  <Label fx:id="stagingTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" GridPane.rowIndex="3" />
+                  <Label fx:id="stagingReworkTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" GridPane.rowIndex="4" />
+                  <Label fx:id="photoshopTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" GridPane.rowIndex="6" />
+                  <Label fx:id="photoshopReworkTimeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../styles/timeLabels.css" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Wall edits:" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="wallEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Wall rework edits:" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label fx:id="wallReworkEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Stage edits:" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Label fx:id="stageEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Stage rework edits:" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Label fx:id="stageReworkEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Photoshop edits:" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Label fx:id="photoshopEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Photoshop rework edits:" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  <Label fx:id="photoshopReworkEditsLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="160.0" stylesheets="@../../../styles/descriptionDoneLabels.css" text="Total number of edits done:" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                  <Label fx:id="totalEditsLabel" alignment="CENTER" prefHeight="50.0" prefWidth="120.0" style="-fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5; -fx-font-weight: bold; -fx-font-size: 18;" stylesheets="@../../../styles/editsDoneLabels.css" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="100.0" prefWidth="900.0" />
+   </children>
+</Pane>

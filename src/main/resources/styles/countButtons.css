@@ -1,0 +1,15 @@
+.button
+{
+	-fx-background-color: #858AD9;
+	-fx-font-size: 14;
+	-fx-font-family: "Comic Sans MS";
+	-fx-text-fill: #ffffff;
+}
+.button:hover
+{
+	-fx-background-color: #2A1C42;
+}
+.button:pressed
+{
+	-fx-background-color: #7156DD;
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="framePane" fx:id="ap" prefHeight="640.0" prefWidth="1200.0" style="-fx-background-color: #3F2B63; -fx-background-radius: 20 20 20 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atlas.MainWindowController">
+   <children>
+      <VBox layoutY="40.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #3F2B63; -fx-background-radius: 0 0 0 20;">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-bottom-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" translateX="70.0">
+                     <image>
+                        <Image url="@../../../images/atlas.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="userEmailLabel" alignment="CENTER" prefWidth="300.0" text="email.address@yahoo.com" textFill="WHITE" translateY="10.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../icons/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="countButton" alignment="BASELINE_LEFT" graphicTextGap="45.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="300.0" stylesheets="@../../../styles/style.css" text="Count" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                     <image>
+                        <Image url="@../../../icons/calculator.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="statisticsButton" alignment="BASELINE_LEFT" graphicTextGap="39.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="300.0" stylesheets="@../../../styles/style.css" text="Statistics" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="autoClickerButton" alignment="BASELINE_LEFT" graphicTextGap="34.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="300.0" stylesheets="@../../../styles/style.css" text="AutoClicker" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                     <image>
+                        <Image url="@../../../icons/cursor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingsButton" alignment="BASELINE_LEFT" graphicTextGap="36.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="300.0" stylesheets="@../../../styles/style.css" text="Settings" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/gears.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logOutButton" alignment="BASELINE_LEFT" graphicTextGap="40.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="300.0" style="-fx-background-radius: 0 0 0 20;" stylesheets="@../../../styles/style.css" text="Log Out" textFill="WHITE" translateY="87.0">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="panelStatus" layoutX="300.0" layoutY="40.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0 0 20 0;" />
+      <AnchorPane id="topBar" fx:id="topBar" prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #4B3478; -fx-background-radius: 20 20 0 0;">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1160.0" mnemonicParsing="false" onAction="#closeClick" prefHeight="39.0" prefWidth="40.0" style="-fx-background-radius: 0 20 0 0;" stylesheets="@../../../styles/closeButton.css" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/x.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="1116.0" mnemonicParsing="false" onAction="#minimizeClick" prefHeight="39.0" prefWidth="40.0" stylesheets="@../../../styles/minimizeButton.css" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/minimize.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="40.0" prefWidth="1200.0" />
+      <Separator layoutY="39.0" prefWidth="1200.0" />
+      <Separator layoutX="300.0" layoutY="40.0" orientation="VERTICAL" prefHeight="600.0" />
+   </children>
+</AnchorPane>
